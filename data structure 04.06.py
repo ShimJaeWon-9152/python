@@ -193,3 +193,92 @@ print(t + t)
 print(t * 2)
 print(t,t)
 """
+
+#문제 13번
+"""
+Mydict = {'1':1,'2':2}
+Copy = Mydict
+Mydict['1'] = 5
+print(Mydict)
+print(Copy)
+result = Mydict['1']+Copy['1']
+print(result)
+"""
+
+#문제 14번
+"""
+sentence = list("You Love Me?")
+
+
+sentence = list("You Love Me?")
+result = ''
+for i in range(len(sentence)):
+    if i % 3 == 0:
+        result += sentence.pop()
+    else:
+        result += sentence.pop(0)
+print(result)
+"""
+
+#문제 15번
+"""
+number = [5,6,7,8,9,1,2,3,4]
+result = []
+result.append(number.pop(0))
+result.append(number.pop())
+result.append(number.pop(1))
+result.append(number.pop())
+result.append(number.pop(0))
+print(number[0]+result[-1])
+print(result[-1])
+print(number)
+"""
+
+#문제 16번
+"""
+a = list(range(10))
+a.append(a[3])
+print(a)
+a.pop(a[3])
+print(a)
+a.insert(3,a[-1]) # 3번째 자리에 a[-1]
+print(a)
+a.pop()
+
+print(a)
+"""
+
+#문제 17번
+"""
+box = [1,'red',3,(),None]
+print(len(box))
+"""
+
+#문제 18번
+"""
+data_1 = {'one' : (1,2,3,4,5,6), 'two':[1,2,3,4,5,6],'three':{'four':4,'five':5}}
+for k in ['one','two','three']:
+    
+    try:
+        print(data_1[k][:1])
+
+    except TypeError:
+        print("error")
+
+for k in ['one','two','three']:
+    
+    try:
+        data_1[k][-1] = "a"
+        print(data_1[k][-1])
+    except TypeError :
+        print("error")
+"""
+
+#문제 20번
+class_category = ["A","B","C","D"]
+student_category = ["Sam","Sarah","Jane","John"]
+
+class_student_cate = {}
+for i in range(len(class_category)):
+    class_student_cate[class_category[i]] = student_category[i]
+print(class_student_cate)
